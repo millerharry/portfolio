@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Switchboard icon</title>
+  <desc id="desc">A warm coral rounded-square icon with a cream stepped routing path linking four circular terminals.</desc>
+  <rect width="256" height="256" rx="68" fill="#FF6B4A"/>
+  <g stroke="#FAF7F2" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M80 80H176V128H80V176H176"/>
+  </g>
+  <g fill="#FAF7F2">
+    <circle cx="80" cy="80" r="18"/>
+    <circle cx="176" cy="80" r="18"/>
+    <circle cx="80" cy="176" r="18"/>
+    <circle cx="176" cy="176" r="18"/>
+  </g>
+</svg>

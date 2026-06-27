@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harry Miller — Portfolio
 
-## Getting Started
+> The source for my personal portfolio. A motion-led, dark, production-grade site built to show — not just tell — that I design and ship products end-to-end.
 
-First, run the development server:
+**Live:** _deploying soon_ · **Stack:** Next.js 16 · TypeScript · Tailwind CSS · Framer Motion · Lenis
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Portfolio preview](docs/preview.png)
+
+## What this is
+
+A single-page portfolio with a signature **3D product gallery** hero, three in-depth case studies, and an "how I build" section — engineered to the same bar as the products it showcases. Every animation is buttery, every breakpoint is clean, and the whole thing is accessible and fast.
+
+## Highlights
+
+**Design & motion**
+- A cohesive **"Midnight Kinetic"** design system (tokens for colour, type, spacing, radius, motion) in `tailwind.config.ts` + `app/globals.css`.
+- **Live 3D product gallery** — real app screenshots floating in a perspective scene with pointer-driven tilt + parallax and scroll-scrubbed depth.
+- Custom **cursor spotlight**, **magnetic** CTAs, **Lenis** smooth scroll, scroll-reveal and count-up primitives — all composed from small, reusable components.
+- Per-project accent system so each case study has its own identity (viridian / orange / electric blue).
+
+**Engineering & quality**
+- **Flawless responsive** layout (375 → 1440px) with zero horizontal overflow at any width.
+- **Accessible:** WCAG AA contrast, visible keyboard focus, skip-link, semantic headings, alt text on every image, ARIA-labelled landmarks, 44px touch targets.
+- **Reduced-motion aware** — every effect has a static fallback via `prefers-reduced-motion`.
+- **Performance:** `next/image` with AVIF/WebP + tight `sizes`, lazy-loaded below-fold media, no render-blocking animation libs.
+- **SEO:** generated Open Graph image (`app/opengraph-image.tsx`), JSON-LD `Person` schema, full metadata.
+
+## Tech stack
+
+| Area | Choice |
+|------|--------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript (strict) |
+| Styling | Tailwind CSS v3 + a custom token layer |
+| Motion | Framer Motion + Lenis (smooth scroll) |
+| Icons | Lucide + Simple Icons brand glyphs |
+| Deploy | Vercel |
+
+## Featured work
+
+- **The Card Exchange** — a production full-stack NZ trading-card marketplace (Next.js + Supabase + Stripe Connect, RLS, 200+ tests).
+- **Logbook** — a premium SwiftUI + Firebase social fitness app with real-time chat and a coach layer.
+- **Switchboard** — a live AI receptionist (Astro + Retell AI + Twilio) you can call right now.
+
+## Project structure
+
+```
+app/                 # App Router entry, layout, OG image
+components/
+  sections/          # hero, proof, work, process, about, contact
+  ui/                # reveal, marquee, count-up, button, section, cursor…
+  device/            # iPhone + browser device frames
+lib/content.ts       # single source of truth for all copy + project data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+All site content lives in `lib/content.ts`, so the whole site is data-driven and easy to update.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Getting started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
+npm run lint     # eslint
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+[MIT](LICENSE) © 2026 Harry Miller
