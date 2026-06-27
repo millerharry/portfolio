@@ -4,6 +4,9 @@
 
 **Live:** _deploying soon_ · **Stack:** Next.js 16 · TypeScript · Tailwind CSS · Framer Motion · Lenis
 
+[![CI](https://github.com/millerharry/portfolio/actions/workflows/ci.yml/badge.svg)](https://github.com/millerharry/portfolio/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
 ![Portfolio preview](docs/preview.png)
 
 ## What this is
